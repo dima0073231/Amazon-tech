@@ -1,0 +1,162 @@
+ * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Space Grotesk';
+      background: #f8fbfe;
+      padding: 40px 20px;
+      background-image: url('../img/bkg.png');
+    }
+
+    h1 {
+
+      text-align: center;
+      font-size: 50px;
+      margin-bottom: 40px;
+      font-weight: bold;
+    }
+
+    .testimonial-section {
+      position: relative;
+      max-width: 1200px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+
+    .testimonial-container {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .testimonial-card {
+      display: flex;
+      gap: 20px;
+      transition: transform 0.5s ease-in-out;
+      margin-bottom: 50px;
+    }
+
+    .testimonial {
+      background: white;
+      border-radius: 7px;
+      padding: 100px 20px 50px 20px ;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      max-width: 350px;
+      min-width: 380px;
+      min-height: 420px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .company {
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #2c3e50;
+    }
+    .name{
+         font-size: 24px;
+         font-weight: bold;
+
+    }
+.desc{
+    font-size:15px;
+    width: 180px;
+    font-weight: bold;
+}
+    .text {
+      font-size: 0.95rem;
+      margin-bottom: 20px;
+      color: #555;
+    }
+
+    .author {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.9rem;
+      color: #333;
+    }
+
+    .author img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .nav-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: white;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: background 0.3s;
+      font-size: 20px;
+      z-index: 10;
+    }
+
+    .nav-button:hover {
+      background: #e0f0ff;
+    }
+
+    .prev {
+      left: 0px;
+    }
+
+    .next {
+      right: 0px;
+    }
+
+    .pagination {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #ccc;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .dot.active {
+      background: #007bff;
+    }
+
+    @media (max-width: 768px) {
+      .testimonial-card {
+        flex-wrap: nowrap;
+        transform: translateX(0) !important;
+      }
+
+      .testimonial {
+        max-width: 100%;
+        min-width: 100%;
+      }
+
+      .prev, .next {
+        top: 90%;
+        transform: translateY(0);
+      }
+
+      .prev {
+        left: 20%;
+      }
+
+      .next {
+        right: 20%;
+      }
+    }
